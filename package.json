@@ -1,10 +1,10 @@
 {
 	"license": "MIT",
 	"scripts": {
-		"frontend:install": "cd udagram/udagram_frontend && yarn install",
+		"frontend:install": "cd udagram/udagram_frontend && npm install",
 		"frontend:build": "cd udagram/udagram_frontend && npm run build",
 		"frontend:deploy": "cd udagram/udagram_frontend && npm run deploy",
-		"api:install": "cd udagram/udagram_api && yarn install",
+		"api:install": "cd udagram/udagram_api && npm install",
 		"api:build": "cd udagram/udagram_api && npm run build",
 		"api:deploy": "cd udagram/udagram_api && npm run deploy"
 	}
