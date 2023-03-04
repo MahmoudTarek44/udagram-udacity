@@ -1,5 +1,4 @@
 {
-	"license": "MIT",
 	"scripts": {
 		"frontend:install": "cd udagram/udagram_frontend && npm install",
 		"frontend:build": "cd udagram/udagram_frontend && npm run build",
