@@ -11,9 +11,9 @@
 		"tsc": "npx tsc",
 		"clean": "rm -rf www/ || true",
 		"dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
-		"deploy": "eb list && eb use udagram-api-dev && eb deploy",
 		"zip":"7z a Archive.zip .",
-		"build": "npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && yarn zip && cd .."
+		"build": "npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && yarn zip && cd ..",
+		"deploy": "eb list && eb use udagram-api-dev && eb deploy"
 	},
 	"keywords": [],
 	"author": "Gabriel Ruttner",
