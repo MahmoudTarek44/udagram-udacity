@@ -8,6 +8,7 @@ jobs:
     docker:
       - image: "cimg/node:14.15"
     steps:
+      - node/install
       - aws-cli/setup
       - eb/setup
       - checkout
