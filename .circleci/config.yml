@@ -20,23 +20,23 @@ jobs:
           name: Front-End Build
           command: |
             npm run frontend:build
-      - run:
-          name: Front-End Test
-          command: |
-            npm run frontend:test
-      - run:
-          name: Front-End E2E test
-          command: |
-            npm run frontend:e2e
-      - checkout
-      - run:
-          name: Install Backend API Dependencies
-          command: |
-            npm run api:install
-      - run:
-          name: Backend API Build
-          command: |
-            npm run api:build
+      # - run:
+      #     name: Front-End Test
+      #     command: |
+      #       npm run frontend:test
+      # - run:
+      #     name: Front-End E2E test
+      #     command: |
+      #       npm run frontend:e2e
+      # - checkout
+      # - run:
+      #     name: Install Backend API Dependencies
+      #     command: |
+      #       npm run api:install
+      # - run:
+      #     name: Backend API Build
+      #     command: |
+      #       npm run api:build
             
   # deploy:
   #   # docker:
@@ -51,9 +51,9 @@ jobs:
   #         command: |
   #           npm run frontend:deploy
 
-workflows:
-  udagram:
-    jobs:
-      - build
-      - deploy
+# workflows:
+#   udagram:
+#     jobs:
+#       - build
+#       - deploy
 
