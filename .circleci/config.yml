@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: "cimg/node:14.15"
+      - image: "cimg/base:stable"
     steps:
       - node/install:
       - checkout
@@ -38,18 +38,18 @@ jobs:
           command: |
             npm run api:build
             
-  # deploy:
-  #   docker:
-  #     - image: "cimg/base:stable"
-  #   steps:
-  #     - run:
-  #         name: Backend API Deployment
-  #         command: |
-  #           npm run api:deploy
-  #     - run:
-  #         name: Front-End Deploy
-  #         command: |
-  #           npm run frontend:deploy
+  deploy:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - run:
+          name: Backend API Deployment
+          command: |
+            npm run api:deploy
+      - run:
+          name: Front-End Deploy
+          command: |
+            npm run frontend:deploy
 
 workflows:
   udagram:
