@@ -37,7 +37,7 @@ jobs:
           name: Backend API Build
           command: |
             npm run api:build
-            
+
   # deploy:
   #   # docker:
   #   #   - image: "cimg/base:stable"
@@ -56,4 +56,3 @@ workflows:
     jobs:
       - build
       - deploy
-
