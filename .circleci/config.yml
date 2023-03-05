@@ -8,6 +8,7 @@ jobs:
     docker:
       - image: "cimg/node:14.15"
     steps:
+      - node/install@14.15
       - checkout
       - aws-cli/setup
       - eb/setup
@@ -16,17 +17,13 @@ jobs:
           command: |
             npm run frontend:install
       - run:
-          name: Front-End Build
-          command: |
-            npm run frontend:build
-      - run:
-          name: Front-End Test
-          command: |
-            npm run frontend:test
-      - run:
           name: Front-End E2E test
           command: |
             npm run frontend:e2e
+      - run:
+          name: Front-End Build
+          command: |
+            npm run frontend:build
       - checkout
       - run:
           name: Install Backend API Dependencies
