@@ -43,13 +43,13 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - run:
-        name: Backend API Deployment
-        command: |
-          npm run api:deploy
+          name: Backend API Deployment
+          command: |
+            npm run api:deploy
       - run:
-        name: Front-End Deploy
-        command: |
-          npm run frontend:deploy
+          name: Front-End Deploy
+          command: |
+            npm run frontend:deploy
 
 workflows:
   udagram:

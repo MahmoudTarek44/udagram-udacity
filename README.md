@@ -1,4 +1,4 @@
-# Project: Deployment process : **Hosting Full-stack Application**. 
+# Project : Deployment process **( Hosting Full-stack Application )**. 
 
 ## Quick overview
 
