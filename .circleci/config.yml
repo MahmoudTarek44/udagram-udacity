@@ -8,10 +8,9 @@ jobs:
     docker:
       - image: "cimg/node:14.15"
     steps:
-      - node/install@14.15
-      - checkout
       - aws-cli/setup
       - eb/setup
+      - checkout
       - run:
           name: Install Front-End Dependencies
           command: |
