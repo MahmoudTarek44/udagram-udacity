@@ -1,1 +1,1 @@
-aws s3 cp --recursive --acl public-read ./www s3://-----my s3 bucket name-----/
+aws s3 cp --recursive --acl public-read ./www s3://mahmoud-7673-1891-3084/
