@@ -1,5 +1,5 @@
 # _Applicaiton dependencies_ : `packages version`,
-## _Global_ >>
+## _Global_ :
     {
         Node : 14.15.1,
         NPM  : 8.5.5,
@@ -8,8 +8,8 @@
         EB Cli : 3.20.3,
     }
     
-## _Back-end_  >>
-### Back end is uding Node.js & express / PostgresDB 
+## _Back-end_ :
+### Back end is using Node.js & express / PostgresDB 
     { 
         Dependencies :
             "@types/bcryptjs": "2.4.2",
@@ -44,8 +44,8 @@
             "ts-node-dev": "^1.0.0-pre.32",
             "typescript": "^4.2.3"
         }
-## _Back-end_  >>
-### Front-end is uding Ionic/Angular framework & Typescript 
+## _Front-end_ :
+### Front-end is using Ionic/Angular framework & Typescript 
 
     {
         Dependencies :
