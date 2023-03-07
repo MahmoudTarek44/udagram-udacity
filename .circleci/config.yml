@@ -28,7 +28,6 @@ jobs:
           name: Backend API Build
           command: |
             npm run api:build
-
   deploy:
     docker:
       - image: "cimg/base:stable"
@@ -44,7 +43,6 @@ jobs:
           name: Backend API Deployment
           command: |
             npm run api:deploy
-
 workflows:
   udagram:
     jobs:
