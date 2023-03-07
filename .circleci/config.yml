@@ -32,9 +32,11 @@ jobs:
           name: Backend API Build
           command: |
             npm run api:build
-
-      - checkout
   
+  deploy:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
       - run:
           name: Front-End Deploy
           command: |
@@ -43,20 +45,15 @@ jobs:
           name: Backend API Deployment
           command: |
             npm run api:deploy
-  # deploy:
-  #   docker:
-  #     - image: "cimg/base:stable"
-    # steps:
 
-# workflows:
-#   udagram:
-#     jobs:
-#       - deploy
-      # - build
-      #     filters:
-      #       branches:
-      #         only: /main/
-      # - hold:
-      #     type: approval
-      #     requires:
-      #       - build
+workflows:
+  udagram:
+    jobs:
+      - build
+          filters:
+            branches:
+              only: /main\/
+      - deploy
+          filters:
+            branches:
+              only: /main\/
