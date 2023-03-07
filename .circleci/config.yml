@@ -30,6 +30,11 @@ jobs:
           name: Backend API Build
           command: |
             npm run api:build
+            
+  hold:
+    type: approval
+    requires:
+      - build
 
   deploy:
     docker:
@@ -44,15 +49,15 @@ jobs:
           command: |
             npm run frontend:deploy
 
-workflows:
-  udagram:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only: /main/
-      - hold:
-          type: approval
-          requires:
-            - build
-      - deploy
+# workflows:
+#   udagram:
+#     jobs:
+#       - build:
+#           filters:
+#             branches:
+#               only: /main/
+#       - hold:
+#           type: approval
+#           requires:
+#             - build
+#       - deploy
