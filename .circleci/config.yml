@@ -30,12 +30,6 @@ jobs:
           name: Backend API Build
           command: |
             npm run api:build
-            
-  hold:
-    type: approval
-    requires:
-      - build
-
   deploy:
     docker:
       - image: "cimg/base:stable"
