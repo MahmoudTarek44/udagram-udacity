@@ -9,7 +9,7 @@ jobs:
       - image: "cimg/node:14.15.0"
     steps:
       - node/install:
-          node-version: '14.15.0'
+          node-version: "14.15.0"
       - aws-cli/setup
       - eb/setup
       - checkout
@@ -30,7 +30,7 @@ jobs:
           name: Backend API Build
           command: |
             npm run api:build
-            
+
   deploy:
     docker:
       - image: "cimg/base:stable"
@@ -49,7 +49,6 @@ workflows:
     jobs:
       - build:
           filters:
-                branches:
-                  only: /main/
+            branches:
+              only: /main\/.*/
       - deploy
-
