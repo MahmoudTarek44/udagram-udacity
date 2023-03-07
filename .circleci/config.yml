@@ -51,4 +51,8 @@ workflows:
           filters:
             branches:
               only: /main/
+      - hold:
+          type: approval
+          requires:
+            - build
       - deploy
