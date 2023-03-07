@@ -35,23 +35,23 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - run:
-          name: Backend API Deployment
-          command: |
-            npm run api:deploy
-      - run:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
+      - run:
+          name: Backend API Deployment
+          command: |
+            npm run api:deploy
 
-# workflows:
-#   udagram:
-#     jobs:
-#       - build:
-#           filters:
-#             branches:
-#               only: /main/
-#       - hold:
-#           type: approval
-#           requires:
-#             - build
-#       - deploy
+workflows:
+  udagram:
+    jobs:
+      - deploy
+      - build
+      #     filters:
+      #       branches:
+      #         only: /main/
+      # - hold:
+      #     type: approval
+      #     requires:
+      #       - build
