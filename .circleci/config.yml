@@ -23,7 +23,7 @@ jobs:
             npm run frontend:build
 
       - checkout
-      
+
       - run:
           name: Install Backend API Dependencies
           command: |
@@ -32,11 +32,6 @@ jobs:
           name: Backend API Build
           command: |
             npm run api:build
-  
-  deploy:
-    docker:
-      - image: "cimg/base:stable"
-    steps:
       - run:
           name: Front-End Deploy
           command: |
@@ -46,14 +41,19 @@ jobs:
           command: |
             npm run api:deploy
 
-workflows:
-  udagram:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only: /main/
-      - deploy:
-          filters:
-            branches:
-              only: /main/
+  # deploy:
+  #   docker:
+  #     - image: "cimg/base:stable"
+  #   steps:
+
+# workflows:
+#   udagram:
+#     jobs:
+#       - build:
+#           filters:
+#             branches:
+#               only: /main/
+#       - deploy:
+#           filters:
+#             branches:
+#               only: /main/
