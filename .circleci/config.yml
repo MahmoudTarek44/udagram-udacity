@@ -46,6 +46,7 @@ jobs:
 workflows:
   udagram:
     jobs:
+      - deploy
       - build
       #     filters:
       #       branches:
@@ -54,4 +55,3 @@ workflows:
       #     type: approval
       #     requires:
       #       - build
-      - deploy
